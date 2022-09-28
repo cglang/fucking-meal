@@ -2,23 +2,13 @@ name: demo
 
 on:
   schedule:
-    - cron: '43 4 * * 1,2,3,4,5'
-  # Allows you to run this workflow manually from the Actions tab
-  # workflow_dispatch:
+    - cron: '10,20,30,40,50,00 * * * 1,2,3,4,5'
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  test_schedule:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          # echo 哈哈哈哈
-          # echo `ls`
           echo `date`
           curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=ad22a2c7-e205-494f-9c42-3caadad42840' -H 'Content-Type: application/json' -d '{"msgtype": "text","text": {"content": "ccc!"} }'
