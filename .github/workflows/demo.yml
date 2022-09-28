@@ -21,4 +21,4 @@ jobs:
         run: |
           echo 哈哈哈哈
           ls
-          curl https:baidu.com
+          curl https://baidu.com
