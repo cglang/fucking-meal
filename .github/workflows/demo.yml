@@ -20,5 +20,6 @@ jobs:
       - name: Run a multi-line script
         shell: bash
         run: |
-          echo 哈哈哈哈,
+          echo 哈哈哈哈
+          ls
           bash curl.sh
