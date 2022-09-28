@@ -2,9 +2,7 @@ name: demo
 
 on:
   schedule:
-    - cron: '10 12 * * 1,2,3,4,5'
-    - cron: '1 1 * * *'
-    - cron: '1/1 * * * *'    
+    - cron: '40 4 * * 1,2,3,4,5'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,4 +22,4 @@ jobs:
           # echo 哈哈哈哈
           # echo `ls`
           echo `date`
-          curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=ad22a2c7-e205-494f-9c42-3caadad42840' -H 'Content-Type: application/json' -d '{"msgtype": "text","text": {"content": "干饭时间!"} }'
+          curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=ad22a2c7-e205-494f-9c42-3caadad42840' -H 'Content-Type: application/json' -d '{"msgtype": "text","text": {"content": "ccc!"} }'
